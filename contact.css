@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -58,7 +59,6 @@ main {
     padding: 100px 25px;
 }
 
-/* Centers the contact content */
 section {
     display: flex;
     justify-content: center;
@@ -67,14 +67,14 @@ section {
     min-height: 60vh;
 }
 
-section div {
+.contact-content {
+    width: 100%;
     max-width: 650px;
 }
 
 h1 {
     font-size: 4rem;
     line-height: 1.1;
-    text-align: center;
 }
 
 h1 span {
@@ -83,23 +83,76 @@ h1 span {
 
 p {
     color: #cbd5e1;
-    text-align: center;
 }
 
-/* Email button */
-.email-button {
-    display: inline-block;
+#contact-button {
     margin-top: 20px;
-    padding: 12px 22px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
     background: #22D3EE;
     color: #0F172A;
     font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
+    cursor: pointer;
     transition: 0.2s ease;
 }
 
-.email-button:hover {
+#contact-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Form starts hidden */
+#contact-form {
+    display: none;
+    margin-top: 30px;
+    padding: 30px;
+    text-align: left;
+    background: #111c30e8;
+    border: 1px solid #64748B55;
+    border-radius: 8px;
+    gap: 18px;
+}
+
+#contact-form.show {
+    display: grid;
+}
+
+label {
+    display: grid;
+    gap: 7px;
+    color: #F4F4F4;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #64748B;
+    background: #0F172A;
+    color: #F4F4F4;
+    border-radius: 5px;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid #22D3EE;
+    border-color: #22D3EE;
+}
+
+#contact-form button {
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    background: #22D3EE;
+    color: #0F172A;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#contact-form button:hover {
     transform: translateY(-2px);
     opacity: 0.9;
 }
@@ -122,4 +175,11 @@ footer {
     h1 {
         font-size: 3rem;
     }
+}
+
+.email-note {
+    font-size: 0.85rem;
+    color: #64748B;
+    text-align: center;
+    margin: 0;
 }

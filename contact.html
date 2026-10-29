@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,14 +25,15 @@
 
     <section>
 
-        <div>
+        <div class="contact-content">
 
             <h1>
                 Let's <span>Connect.</span>
             </h1>
 
             <p>
-                I am interested in junior software development, IT support, Cybersecurity and freelance work for software development
+                I am interested in junior software development, IT support,
+                cybersecurity, and freelance software development opportunities.
             </p>
 
             <p>
@@ -44,7 +46,7 @@
             <p>
                 <b>LinkedIn:</b>
                 <a
-                        href="https:/www.linkedin.com/in/lucas-mcculloch-459a15397/"
+                        href="https://www.linkedin.com/in/lucas-mcculloch-459a15397/"
                         target="_blank"
                 >
                     View Profile
@@ -54,19 +56,60 @@
             <p>
                 <b>GitHub:</b>
                 <a
-                        href="https:/github.com/lmcculloch2007"
+                        href="https://github.com/lmcculloch2007"
                         target="_blank"
                 >
                     View GitHub
                 </a>
             </p>
 
-            <a
-                    class="email-button"
-                    href="mailto:lmcculloch2007@gmail.com?subject=Portfolio Contact&body=Hi Lucas,"
-            >
-                Send Me an Email
-            </a>
+            <button id="contact-button">
+                Contact Me
+            </button>
+
+            <form id="contact-form">
+
+                <label>
+                    Your Name
+                    <input
+                            type="text"
+                            id="name"
+                            required
+                    >
+                </label>
+
+                <label>
+                    Your Email
+                    <input
+                            type="email"
+                            id="email"
+                            required
+                    >
+                </label>
+
+                <label>
+                    Subject
+                    <input
+                            type="text"
+                            id="subject"
+                            required
+                    >
+                </label>
+
+                <label>
+                    Message
+                    <textarea
+                            id="message"
+                            rows="6"
+                            required
+                    ></textarea>
+                </label>
+
+                <button type="submit">
+                    Send Email
+                </button>
+
+            </form>
 
         </div>
 
@@ -78,7 +121,8 @@
     © Lucas McCulloch · Last updated: October 2026
 </footer>
 
-<script src="Javascript/script.js"></script>
+<script src="script.js"></script>
+<script src="contact.js"></script>
 
 </body>
 </html>
